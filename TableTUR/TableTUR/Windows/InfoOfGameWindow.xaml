@@ -1,0 +1,67 @@
+﻿<Window x:Class="Main.InfoOfGameWindow"
+        x:ClassModifier="public"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Main"
+        mc:Ignorable="d"
+        x:Name="InfoOfGameWin" 
+        x:FieldModifier="public"
+        Title="Информация об игре" 
+        Height="250" Width="400"
+        ResizeMode="CanMinimize"
+        WindowStartupLocation="CenterScreen"
+        Style="{DynamicResource WindowStyle}">
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"  />
+            <RowDefinition Height="0.5*"  />
+            <RowDefinition Height="0.5*"  />
+            <RowDefinition Height="0.5*"  />
+            <RowDefinition Height="0.5*"  />
+            <RowDefinition Height="0.5*"  />
+
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+
+
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" TextAlignment="Center">
+            Первый участник
+        </TextBlock>
+
+        <TextBlock Grid.Column="3" Grid.Row="0" Grid.ColumnSpan="2" TextAlignment="Center">
+             Второй участник
+        </TextBlock>
+
+        <TextBlock x:Name="firstt"  Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" TextAlignment="Center">
+           
+        </TextBlock>
+
+        <TextBlock x:Name="secondt" Grid.Column="3" Grid.Row="1" Grid.ColumnSpan="2" TextAlignment="Center">
+             
+        </TextBlock>
+
+        <TextBlock  Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="3" TextAlignment="Center">
+           Победитель
+        </TextBlock>
+
+
+        <RadioButton x:Name="check1" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" GroupName="Winner" Content="Первый" HorizontalAlignment="Center"/>
+        <RadioButton x:Name="check2" Grid.Column="3" Grid.Row="3" Grid.ColumnSpan="2" GroupName="Winner" Content="Второй" HorizontalAlignment="Center"/>
+
+        <Button x:Name="Winner_on" Grid.Column="2" Grid.Row="4" Click="Winner_on_Click">
+            Сохранить
+        </Button>
+       
+    </Grid>
+</Window>

@@ -4,9 +4,7 @@
 
    
     <Style x:Key="WindowStyle" TargetType="Window">
-        <Setter Property="Background" Value="Bisque">
-       
-        </Setter>
+        <Setter Property="Background" Value="Bisque"/>
         <Setter Property="Foreground" Value="Black" />
         <Setter Property="FontFamily" Value="Arial Narrow" />
 
